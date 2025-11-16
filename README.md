@@ -48,4 +48,43 @@
 <p>Se crean 3 directorios para cada contenedor con el comando 'mkdir -p ~/proyecto/name'.</p>
 <img width="488" height="66" alt="image" src="https://github.com/user-attachments/assets/839dff44-744b-4f50-b4ca-f0d03e9b6c52" />
 
-<h2>5. </h2>
+<h2>5. Crear los Dockerfile personalizados</h2>
+<p>Ahora creamos los Dockerfile personalizados que usaremos, usamos el comando 'nano ~/proyecto/name/Dockerfile'.</p>
+<p>Dockerfile de apache:</p>
+<img width="415" height="271" alt="image" src="https://github.com/user-attachments/assets/8dd3d377-16e4-4740-92d6-b40a01569e2f" />
+<p>Dockerfile de mysql:</p>
+<img width="302" height="186" alt="image" src="https://github.com/user-attachments/assets/72161d47-7adc-4ac8-ae1d-f8df74a77bd7" />
+<p>Dockerfile de nginx:</p>
+<img width="488" height="161" alt="image" src="https://github.com/user-attachments/assets/3054491c-c05a-4bd2-a101-3cdfff8c46dd" />
+<p>default.conf de nginx:</p>
+<img width="374" height="203" alt="image" src="https://github.com/user-attachments/assets/a1d113ad-6566-4dd8-91d8-9569314bd023" />
+
+<h2>6. Construir las imágenes Docker</h2>
+<p>Primero hay que instalar docker en la maquina virtual.</p>
+<p>sudo apt install ca-certificates curl gnupg lsb-release</p>
+<img width="1017" height="613" alt="image" src="https://github.com/user-attachments/assets/1aa644d8-3b4d-434a-a59e-4d0456e604f4" />
+<p>sudo mkdir -p /etc/apt/keyrings</p>
+<p>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg</p>
+<p>echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null</p>
+<img width="1849" height="87" alt="image" src="https://github.com/user-attachments/assets/638b3c6c-e04f-40db-985d-bd02339dad14" />
+<p>sudo apt update</p>
+<img width="848" height="260" alt="image" src="https://github.com/user-attachments/assets/29286d2c-9b66-4e9a-8930-bcd934900b88" />
+<p>sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</p>
+<img width="1624" height="993" alt="image" src="https://github.com/user-attachments/assets/6b486c76-4651-46ad-942b-57ab70b2abae" />
+<p>Ahora se ejecutan unos comandos adicionales para iniciar y habilitar los servicios de docker.</p>
+<p>sudo systemctl start docker</p>
+<p>sudo systemctl enable docker</p>
+<img width="1072" height="84" alt="image" src="https://github.com/user-attachments/assets/1c7f6977-73e7-4802-a35e-4de431bea86f" />
+<p>Ejecutamos 'sudo docker run hello-world' para verificar que este funcionando correctamente.</p>
+<img width="803" height="593" alt="image" src="https://github.com/user-attachments/assets/81d5d3c3-fed7-4168-b400-14c886fa3d05" />
+<p>Observamos que esta funcionando correctamente.</p>
+<p>Ahora se construyen las imagenes docker usando 'docker build'.</p>
+<p>Apache:</p>
+<img width="1176" height="482" alt="image" src="https://github.com/user-attachments/assets/bd863c5d-4e5a-415a-8d9f-ff4643b5d608" />
+<p>Mysql:</p>
+<img width="1173" height="725" alt="image" src="https://github.com/user-attachments/assets/2f9c9666-9aec-42ac-bfe5-05ae48b81033" />
+<p>Nginx:</p>
+<img width="1184" height="791" alt="image" src="https://github.com/user-attachments/assets/2cbf9bc5-fc84-4c8d-ba26-540eedb10527" />
+<p>Verificamos que las imagenes existan con 'sudo docker images'.</p>
+<img width="719" height="157" alt="image" src="https://github.com/user-attachments/assets/04354f61-55c2-443c-8ffb-ceef91190051" />
+<p>Observamos que si existen.</p>
