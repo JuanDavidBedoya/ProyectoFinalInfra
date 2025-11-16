@@ -88,3 +88,17 @@
 <p>Verificamos que las imagenes existan con 'sudo docker images'.</p>
 <img width="719" height="157" alt="image" src="https://github.com/user-attachments/assets/04354f61-55c2-443c-8ffb-ceef91190051" />
 <p>Observamos que si existen.</p>
+
+<h2>7. Usar las imágenes con los volumenes LVM</h2>
+<p>Ejecutaremos los docker run con las imagenes que se crearon en el punto anterior.</p>
+<p>Apache:</p>
+<img width="1086" height="39" alt="image" src="https://github.com/user-attachments/assets/3b934f3a-8bdd-47f7-b156-9fe722d62fa9" />
+<p>Mysql:</p>
+<img width="1368" height="41" alt="image" src="https://github.com/user-attachments/assets/722b0ef0-4fde-498e-88f9-90a93e9dc835" />
+<p>Nginx:</p>
+<img width="1136" height="43" alt="image" src="https://github.com/user-attachments/assets/476babc5-7f29-4f0c-aa1f-4c95f739d25d" />
+<p>Verificamos con el comando 'sudo docker ps' que esten los contenedores.</p>
+<img width="1609" height="107" alt="image" src="https://github.com/user-attachments/assets/e7a01e2d-afeb-4ed3-afbf-1280a1a56301" />
+<p>Observamos que existen y estan corriendo. </p>
+
+<h2></h2>
