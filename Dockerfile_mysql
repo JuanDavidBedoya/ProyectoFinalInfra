@@ -1,0 +1,7 @@
+FROM mysql:8.0
+
+# Variables obligatorias
+ENV MYSQL_ROOT_PASSWORD=1234
+ENV MYSQL_DATABASE=empresa
+
+EXPOSE 3306
