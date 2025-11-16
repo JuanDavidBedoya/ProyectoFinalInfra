@@ -1,4 +1,4 @@
-<img width="642" height="289" alt="image" src="https://github.com/user-attachments/assets/b7e50b74-c626-423b-82a3-d272a8798fcd" /><h1>Proyecto Final</h1>
+<h1>Proyecto Final</h1>
 <p>Realizado por: Juan David Bedoya - Amerika Esmeralda Giraldo</p>
 
 <h2>1. Creación de las particiones en virtualBox</h2>
@@ -40,5 +40,12 @@
 <img width="445" height="64" alt="image" src="https://github.com/user-attachments/assets/c93e3e1a-3247-4fb5-b27c-1256fe82d6b8" />
 <img width="700" height="67" alt="image" src="https://github.com/user-attachments/assets/5128ae14-c46f-40d5-8677-776c3a6e7e93" />
 
-<h2>3. </h2>
-<h3>3.1. Para la creac</h3>
+<h2>3. Configurar los permisos correctos en los directorios de los volumenes.</h2>
+<p>Le asignamos los permisos correctos a los directorios para evitar errores en los contenedores, usando el comando 'sudo chown -R www-data:www-data /mnt/name' en el caso de apache y nginx usamos www-data, pero para mysql como no esta instalado y no se instalara en la maquina virtual sino que estara en un contenedor para darle los permisos usaremos root.</p>
+<img width="656" height="66" alt="image" src="https://github.com/user-attachments/assets/c166474d-98c5-4d6d-930e-6f4fa37f1e20" />
+
+<h2>4. Crear los directorios de trabajo del proyecto.</h2>
+<p>Se crean 3 directorios para cada contenedor con el comando 'mkdir -p ~/proyecto/name'.</p>
+<img width="488" height="66" alt="image" src="https://github.com/user-attachments/assets/839dff44-744b-4f50-b4ca-f0d03e9b6c52" />
+
+<h2>5. </h2>
