@@ -105,7 +105,7 @@
 <p>Ahora pasaremos a las pruebas de funcionamiento.</p>
 <p>Apache:</p>
 <p>Para apache creamos un archivo index.html con un mensaje dentro, reiniciamos el contenedor y luego buscamos la ip localhost en el puerto del apache en el navegador y deberiamos ver el index.html.</p>
-<p>echo "<h1>Hola desde Apache</h1>" | sudo tee /mnt/apache/index.html</p>
+<p>echo "Hola desde Apache" | sudo tee /mnt/apache/index.html</p>
 <img width="899" height="43" alt="image" src="https://github.com/user-attachments/assets/cc335969-a041-4832-9d0c-d14ef96619d1" />
 <p>sudo docker restart apache</p>
 <img width="494" height="46" alt="image" src="https://github.com/user-attachments/assets/1b3a01de-d2e0-446c-b725-28ad0fbba7e1" />
@@ -114,7 +114,7 @@
 <p>Observamos que funciona el contenedor de apache.</p>
 <p>Nginx:</p>
 <p>Para nginx hacemos lo mismo que en apache pero cuando vayamos a abrir en el navegador la el puerto de la ip es 8081.</p>
-<p>echo "<h1>Nginx funcionando</h1>" | sudo tee /mnt/nginx/index.html</p>
+<p>echo "Nginx funcionando" | sudo tee /mnt/nginx/index.html</p>
 <img width="889" height="46" alt="image" src="https://github.com/user-attachments/assets/052502a5-207b-4d15-b4ee-00acd5c10ffb" />
 <p>sudo docker restart nginx</p>
 <img width="479" height="43" alt="image" src="https://github.com/user-attachments/assets/e65b2663-16d2-44bf-8be9-729e8950d732" />
@@ -133,5 +133,24 @@
 <p>Observamos que el contenedor de mysql tambien funciona correctamente.</p>
 
 <h2>9. Persistencia de datos.</h2>
-<p>Ahora vamos a verificar que la persistencia con los volumenes esten funcionando, para esto vamos a modificar los index.html que se crearon en el punto anterior y a reiniciar los contenederos, estos cambios deberian persistir.</p>
-<p></p>
+<p>Ahora vamos a verificar que la persistencia con los volumenes esten funcionando, para esto vamos a reiniciar los contenederos, estos cambios deberian persistir.</p>
+<p>Primero verificamos que estan levantados los contenedores.</p>
+<img width="1540" height="112" alt="image" src="https://github.com/user-attachments/assets/f2ce877a-1eeb-4103-b611-abf9a383a9ec" />
+<p>Apache:</p>
+<p>sudo docker restart apache </p>
+<img width="495" height="42" alt="image" src="https://github.com/user-attachments/assets/aee5a6c1-c5d2-44d4-852e-7a8af2aff66a" />
+<p>Ahora abrimos http://localhost:8080</p>
+<img width="1277" height="967" alt="image" src="https://github.com/user-attachments/assets/fc28086f-96cf-42ee-bd4c-fde7c3bf0194" />
+<p>Vemos que aun esta el index.html que creamos anteriormente entonces la persistencia funciona bien.</p>
+<p>Nginx:</p>
+<p>sudo docker restart nginx </p>
+<img width="480" height="42" alt="image" src="https://github.com/user-attachments/assets/ae549637-a928-4bf0-b960-862e8c90c416" />
+<p>Ahora abrimos http://localhost:8081</p>
+<img width="1276" height="965" alt="image" src="https://github.com/user-attachments/assets/f12c0c4a-b96d-4a50-a278-378a57926723" />
+<p>Vemos que aun esta el index.html que creamos anteriormente entonces la persistencia funciona tambien en este contenedor.</p>
+<p>Mysql:</p>
+<p>sudo docker restart mysql </p>
+<img width="480" height="44" alt="image" src="https://github.com/user-attachments/assets/1b8a5499-933c-474a-b84e-c27a6edf21cf" />
+<p>Ahora entramos al contenedor nuevamente y deberia estar creada la base de datos llamada prueba.</p>
+<img width="794" height="624" alt="image" src="https://github.com/user-attachments/assets/c9e3c5df-4d76-4211-8ea7-11d7809a5614" />
+<p>Observamos que nuevamente la persistencia funciona en el contenedor de mysql.</p>
