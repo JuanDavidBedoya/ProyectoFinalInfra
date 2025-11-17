@@ -161,7 +161,7 @@
 <img width="1842" height="83" alt="image" src="https://github.com/user-attachments/assets/5c16a2fe-02c8-4b7c-b150-e8a4be1327ee" />
 <p>Observamos que se creo el contenedor correctamente, pero vamos a verificarlo usando 'sudo docker ps'.</p>
 <img width="1745" height="138" alt="image" src="https://github.com/user-attachments/assets/f7e00d38-c813-417b-ae2f-45a366ad75a7" />
-<p>Se observa que esta levantando.</p>
+<p>Se observa que esta levantado.</p>
 <p>Este contenedor hace lo siguiente: expone el dashboard el el puerto 19999, permite a Netdata inspeccionar procesos, no tiene restricciones del kernel, tiene volumenes persistentes, permite monitorear el host completo y permite monitorear contenedores docker.</p>
 <p>Ahora vamos a probarlo, abriendo en el navegador http://localhost:19999</p>
 <img width="1280" height="970" alt="image" src="https://github.com/user-attachments/assets/7b8e09d1-8cec-4808-a935-4182b3d84e9f" />
