@@ -101,4 +101,37 @@
 <img width="1609" height="107" alt="image" src="https://github.com/user-attachments/assets/e7a01e2d-afeb-4ed3-afbf-1280a1a56301" />
 <p>Observamos que existen y estan corriendo. </p>
 
-<h2></h2>
+<h2>8. Pruebas de funcionamiento.</h2>
+<p>Ahora pasaremos a las pruebas de funcionamiento.</p>
+<p>Apache:</p>
+<p>Para apache creamos un archivo index.html con un mensaje dentro, reiniciamos el contenedor y luego buscamos la ip localhost en el puerto del apache en el navegador y deberiamos ver el index.html.</p>
+<p>echo "<h1>Hola desde Apache</h1>" | sudo tee /mnt/apache/index.html</p>
+<img width="899" height="43" alt="image" src="https://github.com/user-attachments/assets/cc335969-a041-4832-9d0c-d14ef96619d1" />
+<p>sudo docker restart apache</p>
+<img width="494" height="46" alt="image" src="https://github.com/user-attachments/assets/1b3a01de-d2e0-446c-b725-28ad0fbba7e1" />
+<p>Abrimos http://localhost:8080:</p>
+<img width="1277" height="967" alt="image" src="https://github.com/user-attachments/assets/4f23b855-19f0-47d8-bf5a-b6a90834d917" />
+<p>Observamos que funciona el contenedor de apache.</p>
+<p>Nginx:</p>
+<p>Para nginx hacemos lo mismo que en apache pero cuando vayamos a abrir en el navegador la el puerto de la ip es 8081.</p>
+<p>echo "<h1>Nginx funcionando</h1>" | sudo tee /mnt/nginx/index.html</p>
+<img width="889" height="46" alt="image" src="https://github.com/user-attachments/assets/052502a5-207b-4d15-b4ee-00acd5c10ffb" />
+<p>sudo docker restart nginx</p>
+<img width="479" height="43" alt="image" src="https://github.com/user-attachments/assets/e65b2663-16d2-44bf-8be9-729e8950d732" />
+<p>Abrimos http://localhost:8081:</p>
+<img width="1279" height="973" alt="image" src="https://github.com/user-attachments/assets/29fad77c-24bf-41d8-9a60-0c47c2edb703" />
+<p>Observamos que funciona el contenedor de nginx.</p>
+<p>Mysql:</p>
+<p>Para esta prueba debemos acceder al contenedor.</p>
+<p>sudo docker exec -it mysql mysql -u root -p</p>
+<img width="797" height="349" alt="image" src="https://github.com/user-attachments/assets/6614b747-c5ee-42ca-a9a0-179a594b980f" />
+<p>Ahora ejecutamos 2 comandos para ver las bases de datos que hay creadas y otra para crear una nueva de prueba que nos servira para verificar la persistencia de datos en el siguiente punto.</p>
+<p>SHOW DATABASES;</p>
+<img width="247" height="251" alt="image" src="https://github.com/user-attachments/assets/356aab91-1593-44c6-9148-82a79e974c07" />
+<p>CREATE DATABASE prueba;</p>
+<img width="359" height="335" alt="image" src="https://github.com/user-attachments/assets/25c2f705-ad10-415f-97fe-b2b93f64a0ef" />
+<p>Observamos que el contenedor de mysql tambien funciona correctamente.</p>
+
+<h2>9. Persistencia de datos.</h2>
+<p>Ahora vamos a verificar que la persistencia con los volumenes esten funcionando, para esto vamos a modificar los index.html que se crearon en el punto anterior y a reiniciar los contenederos, estos cambios deberian persistir.</p>
+<p></p>
