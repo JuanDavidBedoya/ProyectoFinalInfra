@@ -1,4 +1,4 @@
-<h1>Proyecto Final</h1>
+<h1>Proyecto Final - Parcial III</h1>
 <p>Realizado por: Juan David Bedoya - Amerika Esmeralda Giraldo</p>
 
 <h2>1. Creación de las particiones en virtualBox</h2>
